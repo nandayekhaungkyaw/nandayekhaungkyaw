@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <style>
+        .container{
+            width: 500px;
+            height: 350px;
+            margin: 90px auto;
+            border:1px solid black ;
+            border-radius: 12px;
+            position: relative;
+        }
+        button{
+            width: 101px;
+            height: 40px;
+
+        }
+        p{
+            font-size: 50px;
+            text-align: center
+        }
+        .yes{
+            position: absolute;
+            left: 60px;
+            bottom: 13px;
+}
+@keyframes noo {
+            0%{ bottom: 0px;
+          right: 0px;
+               
+            }
+  
+   
+    100%{
+        bottom: 50px;
+       right: 40px;
+    }
+    
+        }
+        
+        .no{
+            position: absolute;
+            bottom: 11px;
+           
+            right: 20px;
+      
+
+        }
+        .a p{
+           
+           
+            line-height: 350px;
+            margin: 0;
+            animation: backInUp 2s linear 0s,
+                      heartBeat 2s linear 2s alternate;
+        }
+     
+    </style>
+</head>
+<body>
+    <div id="box" class="container ">
+        <p class="love">ချစ်တယ်မလားကိုကို?</p>
+        <button class="yes" onclick="show()">Yes</button>
+        <button class="no" onclick="go()">NO</button>
+    </div>
+
+    <script>
+        let love=document.querySelector('.love')
+       let nop=document.querySelector(".no");
+       let x=nop.style.right;
+       let y=1
+    
+        function go(){ switch(y)
+        {
+        case 1:
+       nop.style.animation='noo 0s linear 0s';
+         nop.style.bottom='50px';
+         y=2;
+         nop.style.right='40px';
+        break;
+        case 2:
+      nop.style.animation='noo 0s linear 0s';
+         nop.style.bottom='160px';
+         y=3;
+         nop.style.right='60px';
+         break;
+         case 3:
+         nop.style.animation='noo 0s linear 0s';
+         nop.style.bottom='70px';
+         y=4;
+         nop.style.right='80px';
+         break;
+         case 4:
+         nop.style.animation='noo 0s linear 0s';
+         nop.style.bottom='100px';
+         nop.style.right='146px';
+         y=0;
+         break;
+        case 0:
+         nop.style.bottom='11px';
+         y=1
+         nop.style.right='20px';
+
+    }}
+    function show(){
+        love.innerHTML='とても幸せです'
+        document.getElementById("box").setAttribute("class","container a");
+      
+        
+    }
+    
+    </script>
+</body>
+</html>

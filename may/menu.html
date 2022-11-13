@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+             <style>
+                .container{
+                    width: 400px;
+                    height: 200px;
+                    
+                }
+                 .pp
+        {
+            width: 300px;
+            background-color: rgb(239, 244, 245);
+            
+            height: 400px;
+            display: none;
+            color: rgb(224, 8, 8);
+            scroll-behavior: smooth;
+            padding: 12px;
+            overflow: scroll;
+        }
+        .pass{
+            width: 140px;
+            height: 30px;
+            border-radius: 12px;
+        }
+        
+        .error{
+            display: none;
+            animation: hinge 4s 0s alternate infinite;
+            width: 400px;
+            height: 350px;
+            font-size: 60px;
+            font-weight: 900;
+            margin: 12px auto;
+        }
+        #h3{
+       align-items: center
+       ;
+       justify-content: center;
+        }
+             </style>
+</head>
+<body>
+  <br>
+  <br>
+  <br>
+   
+       <div class="container">
+        <input type="text" class="pass" placeholder="passeword " >
+        <a href="question.html" ><h4 class="pp"> Would like to know my favoutite person?</h4></a>
+        <p class="error">Wrong Passeword</p>
+       </div>
+    
+   
+        <button onclick="aa()" class="bb">click</button>
+</body>
+
+<script>
+       
+       let passeword=document.querySelector(".pass");
+        let main=document.querySelector(".pp");
+        let error=document.querySelector(".error");
+        let but=document.querySelector("bb")
+
+       function aa(){
+        if ( passeword.value == 'maythuhein') {
+           
+            main.style.display='block';
+            error.style.display='none';
+            but.style.display='none';
+           
+           
+
+            
+        } else  {
+            error.style.display='block';
+           
+        }}
+</script>
+</html>
